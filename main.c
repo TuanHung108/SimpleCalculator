@@ -10,12 +10,12 @@
         printf("\nSelection Option [1-3]: ");
 
 
-        uint8_t option;
+        unsigned int option;
         scanf("%hhu", &option);
         printf("\nMode selected: %hhu", option);
 
         if (option == 1) {
-            uint32_t first_number, second_number;
+            unsigned int first_number, second_number;
             char operator;
 
             printf("\nEnter first number: ");
@@ -32,8 +32,15 @@
                 case '+':
                     printf("\n%u + %u = %u", first_number, second_number, first_number + second_number);
                     break;
-                case 
-
+                case '-':
+                    printf("\n%u - %u = %d", first_number, second_number, first_number - second_number);
+                    break;
+                case '*':
+                    printf("\n%u * %u = %llu", first_number, second_number,(unsigned long long) first_number * second_number);
+                    break;
+                case '/':
+                    printf("\n%u / %u = %.15g", first_number, second_number,(double) first_number / second_number);
+                    break;
                 default:
                     break;
             }
