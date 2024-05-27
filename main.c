@@ -1,4 +1,5 @@
-    #include<stdio.h>
+    #include <stdio.h>
+    #include <stdlib.h>
 
     int main() {
         printf("\nSIMPLE CALCULATOR");
@@ -11,8 +12,8 @@
 
 
         unsigned int option;
-        scanf("%hhu", &option);
-        printf("\nMode selected: %hhu", option);
+        scanf("%u", &option);
+        printf("\nMode selected: %u", option);
 
         if (option == 1) {
             unsigned int first_number, second_number;
@@ -44,7 +45,8 @@
                 default:
                     break;
             }
-        } else if (option == 2) {
+        } 
+        else if (option == 2) {
             unsigned int first_number, second_number;
 
             printf("\nEnter first number: ");
@@ -63,7 +65,10 @@
             }
 
             printf("\nGCD(%u, %u) = %u", first_number, second_number, gcd);
-
+        } 
+        else if (option == 3) {
+            printf("\nExit program!");
+            exit(0);
         }
         return 0;    
     }
