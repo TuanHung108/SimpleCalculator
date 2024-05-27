@@ -56,6 +56,14 @@
             scanf("%u", &second_number);
             printf("Second number: %u", second_number);
 
+            unsigned int gcd = (first_number < second_number) ? first_number : second_number;
+
+            for (; gcd >= 1; gcd--) {
+                if (first_number % gcd == 0 && second_number % gcd == 0) break;
+            }
+
+            printf("\nGCD(%u, %u) = %u", first_number, second_number, gcd);
+
         }
         return 0;    
     }
